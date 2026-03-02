@@ -47,12 +47,6 @@ class WarehouseTokenCreator implements WarehouseTokenCreatorInterface
      */
     protected AuditLoggerInterface $auditLogger;
 
-    /**
-     * @param \Spryker\Glue\WarehouseOauthBackendApi\Processor\Reader\WarehouseUserAssignmentReaderInterface $warehouseUserAssignmentReader
-     * @param \Spryker\Glue\WarehouseOauthBackendApi\Dependency\Facade\WarehouseOauthBackendApiToAuthenticationFacadeInterface $authenticationFacade
-     * @param \Spryker\Glue\WarehouseOauthBackendApi\Processor\ResponseBuilder\WarehouseResponseBuilderInterface $warehouseResponseBuilder
-     * @param \Spryker\Glue\WarehouseOauthBackendApi\Processor\Logger\AuditLoggerInterface $auditLogger
-     */
     public function __construct(
         WarehouseUserAssignmentReaderInterface $warehouseUserAssignmentReader,
         WarehouseOauthBackendApiToAuthenticationFacadeInterface $authenticationFacade,
@@ -65,11 +59,6 @@ class WarehouseTokenCreator implements WarehouseTokenCreatorInterface
         $this->auditLogger = $auditLogger;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function createWarehouseToken(GlueRequestTransfer $glueRequestTransfer): GlueResponseTransfer
     {
         $warehouseUserAssignmentTransfer = $this->warehouseUserAssignmentReader->findActiveWarehouseUserAssignment($glueRequestTransfer);

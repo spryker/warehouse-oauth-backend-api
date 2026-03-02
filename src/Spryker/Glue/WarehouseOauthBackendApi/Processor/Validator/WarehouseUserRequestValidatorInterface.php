@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\GlueRequestValidationTransfer;
 
 interface WarehouseUserRequestValidatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     * @param \Generated\Shared\Transfer\GlueRequestValidationTransfer $glueRequestValidationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueRequestValidationTransfer
-     */
     public function preCheck(
         GlueRequestTransfer $glueRequestTransfer,
         GlueRequestValidationTransfer $glueRequestValidationTransfer

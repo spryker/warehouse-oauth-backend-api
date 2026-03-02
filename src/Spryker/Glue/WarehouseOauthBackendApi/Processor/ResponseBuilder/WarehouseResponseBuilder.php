@@ -18,9 +18,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class WarehouseResponseBuilder implements WarehouseResponseBuilderInterface
 {
-    /**
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function createForbiddenErrorResponse(): GlueResponseTransfer
     {
         return (new GlueResponseTransfer())
@@ -31,11 +28,6 @@ class WarehouseResponseBuilder implements WarehouseResponseBuilderInterface
                 ->setCode(WarehouseOauthBackendApiConfig::RESPONSE_CODE_OPERATION_IS_FORBIDDEN));
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OauthErrorTransfer $oauthErrorTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function createOauthBadRequestErrorResponse(OauthErrorTransfer $oauthErrorTransfer): GlueResponseTransfer
     {
         $glueErrorTransfer = (new GlueErrorTransfer())->setMessage($oauthErrorTransfer->getMessage())
@@ -47,11 +39,6 @@ class WarehouseResponseBuilder implements WarehouseResponseBuilderInterface
             ->addError($glueErrorTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\OauthResponseTransfer $oauthResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueResponseTransfer
-     */
     public function createWarehouseTokenResponse(OauthResponseTransfer $oauthResponseTransfer): GlueResponseTransfer
     {
         $glueResponseTransfer = new GlueResponseTransfer();

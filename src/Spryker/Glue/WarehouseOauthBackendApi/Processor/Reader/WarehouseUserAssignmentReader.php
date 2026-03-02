@@ -20,19 +20,11 @@ class WarehouseUserAssignmentReader implements WarehouseUserAssignmentReaderInte
      */
     protected WarehouseOauthBackendApiToWarehouseUserFacadeInterface $warehouseUserFacade;
 
-    /**
-     * @param \Spryker\Glue\WarehouseOauthBackendApi\Dependency\Facade\WarehouseOauthBackendApiToWarehouseUserFacadeInterface $warehouseUserFacade
-     */
     public function __construct(WarehouseOauthBackendApiToWarehouseUserFacadeInterface $warehouseUserFacade)
     {
         $this->warehouseUserFacade = $warehouseUserFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer|null
-     */
     public function findActiveWarehouseUserAssignment(GlueRequestTransfer $glueRequestTransfer): ?WarehouseUserAssignmentTransfer
     {
         $userUuid = $glueRequestTransfer->getRequestUserOrFail()->getNaturalIdentifier();

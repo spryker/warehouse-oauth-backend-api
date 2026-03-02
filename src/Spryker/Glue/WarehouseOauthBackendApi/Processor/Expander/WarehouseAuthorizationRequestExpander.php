@@ -17,12 +17,6 @@ class WarehouseAuthorizationRequestExpander implements WarehouseAuthorizationReq
      */
     protected const AUTHORIZATION_REQUEST_ENTITY_DATA_WAREHOUSE_KEY = 'glueRequestWarehouse';
 
-    /**
-     * @param \Generated\Shared\Transfer\AuthorizationRequestTransfer $authorizationRequestTransfer
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\AuthorizationRequestTransfer
-     */
     public function expand(
         AuthorizationRequestTransfer $authorizationRequestTransfer,
         GlueRequestTransfer $glueRequestTransfer

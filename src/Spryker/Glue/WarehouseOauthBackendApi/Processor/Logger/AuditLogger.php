@@ -29,11 +29,6 @@ class AuditLogger implements AuditLoggerInterface
      */
     protected const AUDIT_LOGGER_RECORD_KEY_CONTEXT_TAGS = 'tags';
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return void
-     */
     public function addWarehouseUserFailedLoginAuditLog(GlueRequestTransfer $glueRequestTransfer): void
     {
         $context = $this->addGlueRequestContext(
@@ -44,11 +39,6 @@ class AuditLogger implements AuditLoggerInterface
         $this->addAuditLog('Failed Login (Warehouse User)', $context);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return void
-     */
     public function addWarehouseUserSuccessfulLoginAuditLog(GlueRequestTransfer $glueRequestTransfer): void
     {
         $context = $this->addGlueRequestContext(

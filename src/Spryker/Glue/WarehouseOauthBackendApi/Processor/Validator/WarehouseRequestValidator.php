@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\GlueRequestValidationTransfer;
 
 class WarehouseRequestValidator implements WarehouseRequestValidatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueRequestValidationTransfer
-     */
     public function validate(GlueRequestTransfer $glueRequestTransfer): GlueRequestValidationTransfer
     {
         $glueRequestValidationTransfer = new GlueRequestValidationTransfer();

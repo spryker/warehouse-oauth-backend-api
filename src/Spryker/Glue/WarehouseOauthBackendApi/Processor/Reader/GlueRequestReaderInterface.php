@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\OauthAccessTokenDataTransfer;
 
 interface GlueRequestReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthAccessTokenDataTransfer|null
-     */
     public function findWarehouseByAccessToken(GlueRequestTransfer $glueRequestTransfer): ?OauthAccessTokenDataTransfer;
 }

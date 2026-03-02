@@ -35,9 +35,6 @@ use Spryker\Glue\WarehouseOauthBackendApi\Processor\Validator\WarehouseUserReque
  */
 class WarehouseOauthBackendApiFactory extends AbstractBackendApiFactory
 {
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Processor\Creator\WarehouseTokenCreatorInterface
-     */
     public function createWarehouseTokenCreator(): WarehouseTokenCreatorInterface
     {
         return new WarehouseTokenCreator(
@@ -48,9 +45,6 @@ class WarehouseOauthBackendApiFactory extends AbstractBackendApiFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Processor\RequestBuilder\WarehouseRequestBuilderInterface
-     */
     public function createWarehouseRequestBuilder(): WarehouseRequestBuilderInterface
     {
         return new WarehouseRequestBuilder(
@@ -59,25 +53,16 @@ class WarehouseOauthBackendApiFactory extends AbstractBackendApiFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Processor\ResponseBuilder\WarehouseResponseBuilderInterface
-     */
     public function createWarehouseResponseBuilder(): WarehouseResponseBuilderInterface
     {
         return new WarehouseResponseBuilder();
     }
 
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Processor\Expander\WarehouseAuthorizationRequestExpander
-     */
     public function createWarehouseAuthorizationRequestExpander(): WarehouseAuthorizationRequestExpander
     {
         return new WarehouseAuthorizationRequestExpander();
     }
 
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Processor\Reader\GlueRequestReaderInterface
-     */
     public function createGlueRequestReader(): GlueRequestReaderInterface
     {
         return new GlueRequestReader(
@@ -85,25 +70,16 @@ class WarehouseOauthBackendApiFactory extends AbstractBackendApiFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Processor\Validator\WarehouseRequestValidatorInterface
-     */
     public function createWarehouseRequestValidator(): WarehouseRequestValidatorInterface
     {
         return new WarehouseRequestValidator();
     }
 
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Processor\Validator\WarehouseUserRequestValidatorInterface
-     */
     public function createWarehouseUserRequestValidator(): WarehouseUserRequestValidatorInterface
     {
         return new WarehouseUserRequestValidator();
     }
 
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Processor\Reader\WarehouseUserAssignmentReaderInterface
-     */
     public function createWarehouseUserAssignmentReader(): WarehouseUserAssignmentReaderInterface
     {
         return new WarehouseUserAssignmentReader(
@@ -111,41 +87,26 @@ class WarehouseOauthBackendApiFactory extends AbstractBackendApiFactory
         );
     }
 
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Processor\Logger\AuditLoggerInterface
-     */
     public function createAuditLogger(): AuditLoggerInterface
     {
         return new AuditLogger();
     }
 
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Dependency\Facade\WarehouseOauthBackendApiToAuthenticationFacadeInterface
-     */
     public function getAuthenticationFacade(): WarehouseOauthBackendApiToAuthenticationFacadeInterface
     {
         return $this->getProvidedDependency(WarehouseOauthBackendApiDependencyProvider::FACADE_AUTHENTICATION);
     }
 
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Dependency\Facade\WarehouseOauthBackendApiToWarehouseUserFacadeInterface
-     */
     public function getWarehouseUserFacade(): WarehouseOauthBackendApiToWarehouseUserFacadeInterface
     {
         return $this->getProvidedDependency(WarehouseOauthBackendApiDependencyProvider::FACADE_WAREHOUSE_USER);
     }
 
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Dependency\Service\WarehouseOauthBackendApiToOauthServiceInterface
-     */
     public function getOauthService(): WarehouseOauthBackendApiToOauthServiceInterface
     {
         return $this->getProvidedDependency(WarehouseOauthBackendApiDependencyProvider::SERVICE_OAUTH);
     }
 
-    /**
-     * @return \Spryker\Glue\WarehouseOauthBackendApi\Dependency\Service\WarehouseOauthBackendApiToUtilEncodingServiceInterface
-     */
     public function getUtilEncodingService(): WarehouseOauthBackendApiToUtilEncodingServiceInterface
     {
         return $this->getProvidedDependency(WarehouseOauthBackendApiDependencyProvider::SERVICE_UTIL_ENCODING);

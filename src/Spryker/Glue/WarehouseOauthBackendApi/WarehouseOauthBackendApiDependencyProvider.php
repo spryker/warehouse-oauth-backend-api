@@ -39,11 +39,6 @@ class WarehouseOauthBackendApiDependencyProvider extends AbstractBundleDependenc
      */
     public const FACADE_WAREHOUSE_USER = 'FACADE_WAREHOUSE_USER';
 
-    /**
-     * @param \Spryker\Glue\Kernel\Backend\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Backend\Container
-     */
     public function provideBackendDependencies(Container $container): Container
     {
         $container = parent::provideBackendDependencies($container);
@@ -55,11 +50,6 @@ class WarehouseOauthBackendApiDependencyProvider extends AbstractBundleDependenc
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Backend\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Backend\Container
-     */
     protected function addAuthenticationFacade(Container $container): Container
     {
         $container->set(static::FACADE_AUTHENTICATION, function (Container $container) {
@@ -71,11 +61,6 @@ class WarehouseOauthBackendApiDependencyProvider extends AbstractBundleDependenc
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Backend\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Backend\Container
-     */
     protected function addWarehouseUserFacade(Container $container): Container
     {
         $container->set(static::FACADE_WAREHOUSE_USER, function (Container $container) {
@@ -87,11 +72,6 @@ class WarehouseOauthBackendApiDependencyProvider extends AbstractBundleDependenc
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Backend\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Backend\Container
-     */
     protected function addOauthService(Container $container): Container
     {
         $container->set(static::SERVICE_OAUTH, function (Container $container) {
@@ -103,11 +83,6 @@ class WarehouseOauthBackendApiDependencyProvider extends AbstractBundleDependenc
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Backend\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Backend\Container
-     */
     protected function addUtilEncodingService(Container $container): Container
     {
         $container->set(static::SERVICE_UTIL_ENCODING, function (Container $container) {

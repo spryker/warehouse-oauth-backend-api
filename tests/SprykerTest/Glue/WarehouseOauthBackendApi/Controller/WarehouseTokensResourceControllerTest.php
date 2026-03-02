@@ -36,9 +36,6 @@ use Spryker\Glue\WarehouseOauthBackendApi\WarehouseOauthBackendApiFactory;
  */
 class WarehouseTokensResourceControllerTest extends Unit
 {
-    /**
-     * @return void
-     */
     public function testPostActionAddsWarehouseUserUnsuccessfulLoginAuditLogWhenActiveWarehouseUserNotProvided(): void
     {
         // Arrange
@@ -53,9 +50,6 @@ class WarehouseTokensResourceControllerTest extends Unit
         $warehouseTokensResourceControllerMock->postAction($glueRequestTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testPostActionAddsWarehouseUserUnsuccessfulLoginAuditLogWhenOauthResponseIsNotCorrect(): void
     {
         // Arrange
@@ -70,9 +64,6 @@ class WarehouseTokensResourceControllerTest extends Unit
         $warehouseTokensResourceControllerMock->postAction($glueRequestTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testPostActionAddsWarehouseUserSuccessfulLoginAuditLog(): void
     {
         // Arrange

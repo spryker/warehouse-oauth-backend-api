@@ -11,17 +11,7 @@ use Generated\Shared\Transfer\GlueRequestTransfer;
 
 interface AuditLoggerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return void
-     */
     public function addWarehouseUserFailedLoginAuditLog(GlueRequestTransfer $glueRequestTransfer): void;
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return void
-     */
     public function addWarehouseUserSuccessfulLoginAuditLog(GlueRequestTransfer $glueRequestTransfer): void;
 }

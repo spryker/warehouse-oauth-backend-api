@@ -30,10 +30,6 @@ class WarehouseRequestBuilder implements WarehouseRequestBuilderInterface
      */
     protected GlueRequestReaderInterface $glueRequestReader;
 
-    /**
-     * @param \Spryker\Glue\WarehouseOauthBackendApi\Dependency\Service\WarehouseOauthBackendApiToUtilEncodingServiceInterface $utilEncodingService
-     * @param \Spryker\Glue\WarehouseOauthBackendApi\Processor\Reader\GlueRequestReaderInterface $glueRequestReader
-     */
     public function __construct(
         WarehouseOauthBackendApiToUtilEncodingServiceInterface $utilEncodingService,
         GlueRequestReaderInterface $glueRequestReader
@@ -42,11 +38,6 @@ class WarehouseRequestBuilder implements WarehouseRequestBuilderInterface
         $this->glueRequestReader = $glueRequestReader;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueRequestTransfer
-     */
     public function buildRequest(
         GlueRequestTransfer $glueRequestTransfer
     ): GlueRequestTransfer {
@@ -59,12 +50,6 @@ class WarehouseRequestBuilder implements WarehouseRequestBuilderInterface
         return $this->expandWithWarehouse($glueRequestTransfer, $oauthAccessTokenDataTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     * @param \Generated\Shared\Transfer\OauthAccessTokenDataTransfer $oauthAccessTokenDataTransfer
-     *
-     * @return \Generated\Shared\Transfer\GlueRequestTransfer
-     */
     protected function expandWithWarehouse(
         GlueRequestTransfer $glueRequestTransfer,
         OauthAccessTokenDataTransfer $oauthAccessTokenDataTransfer

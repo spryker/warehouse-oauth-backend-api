@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\WarehouseUserAssignmentTransfer;
 
 interface WarehouseUserAssignmentReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\WarehouseUserAssignmentTransfer|null
-     */
     public function findActiveWarehouseUserAssignment(GlueRequestTransfer $glueRequestTransfer): ?WarehouseUserAssignmentTransfer;
 }

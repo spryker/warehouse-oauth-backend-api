@@ -28,19 +28,11 @@ class GlueRequestReader implements GlueRequestReaderInterface
      */
     protected WarehouseOauthBackendApiToOauthServiceInterface $oauthService;
 
-    /**
-     * @param \Spryker\Glue\WarehouseOauthBackendApi\Dependency\Service\WarehouseOauthBackendApiToOauthServiceInterface $oauthService
-     */
     public function __construct(WarehouseOauthBackendApiToOauthServiceInterface $oauthService)
     {
         $this->oauthService = $oauthService;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GlueRequestTransfer $glueRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\OauthAccessTokenDataTransfer|null
-     */
     public function findWarehouseByAccessToken(GlueRequestTransfer $glueRequestTransfer): ?OauthAccessTokenDataTransfer
     {
         $accessTokenData = $this->extract($glueRequestTransfer);
