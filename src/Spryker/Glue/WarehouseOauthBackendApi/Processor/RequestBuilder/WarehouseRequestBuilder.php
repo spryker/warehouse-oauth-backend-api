@@ -54,7 +54,6 @@ class WarehouseRequestBuilder implements WarehouseRequestBuilderInterface
         GlueRequestTransfer $glueRequestTransfer,
         OauthAccessTokenDataTransfer $oauthAccessTokenDataTransfer
     ): GlueRequestTransfer {
-        /** @var array<string, mixed> $userIdentifier */
         $userIdentifier = $this->utilEncodingService->decodeJson(
             $oauthAccessTokenDataTransfer->getOauthUserIdOrFail(),
             true,
